@@ -23,7 +23,7 @@ if __name__ == "__main__":
             subprocess.call(['python'] + sys.argv)
     else:
         os.environ.setdefault(
-            "DJANGO_SETTINGS_MODULE", "braintree_api.settings"
+            "DJANGO_SETTINGS_MODULE", "tutorial.settings"
         )
 
         from django.core.management import execute_from_command_line
