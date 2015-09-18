@@ -19,7 +19,11 @@ if __name__ == "__main__":
             # packages.
             # HACK: Migrate before running process since this is the fist
             # time the app runs
+            # HACK: After migration load fixture data into the database
             subprocess.call(['python', 'manage.py', 'migrate'])
+            subprocess.call(
+                ['python', 'manage.py', 'loaddata', 'snippets/fixtures/_initial_data.json']
+            )
             subprocess.call(['python'] + sys.argv)
     else:
         os.environ.setdefault(
