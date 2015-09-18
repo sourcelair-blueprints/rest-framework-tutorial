@@ -10,7 +10,7 @@ if __name__ == "__main__":
         with open(PIP_LOG, 'wb') as LOG_FILE:
             print 'Installing dependencies...'
             subprocess.check_call(
-                ['pip', 'install', '-r', '../requirements.txt'],
+                ['pip', 'install', '-r', 'requirements.txt'],
                 stdout=LOG_FILE,
                 stderr=LOG_FILE
             )
